@@ -5,7 +5,7 @@
   "author": "Iskander Broere",
   "private": true,
   "scripts": {
-    "dev": "PORT=3333 nuxt",
+    "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -14,6 +14,9 @@
   },
   "dependencies": {
     "@nuxtjs/apollo": "^3.0.4",
+    "apollo-link-http": "^1.5.2",
+    "graphql": "^0.13.1",
+    "graphql-tag": "^2.8.0",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {

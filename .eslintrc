@@ -33,7 +33,8 @@
       {
         "semi": false
       }
-    ]
+    ],
+    "no-debugger": "off"
   },
   "globals": {
     "use": true,
