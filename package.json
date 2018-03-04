@@ -17,7 +17,8 @@
     "apollo-link-http": "^1.5.2",
     "graphql": "^0.13.1",
     "graphql-tag": "^2.8.0",
-    "nuxt": "^1.0.0"
+    "nuxt": "^1.0.0",
+    "vuetify": "^1.0.4"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
