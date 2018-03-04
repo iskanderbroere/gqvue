@@ -1,5 +1,7 @@
 <template>
-  <v-container fluid grid-list-xl tag="section">
+  <v-container 
+    grid-list-xl
+    tag="section">
     <v-layout row wrap>
       <v-flex
         v-for="card in feed"
@@ -9,7 +11,7 @@
         md6
         lg4
       >
-        <v-card>
+        <v-card tile>
           <v-card-media
             src="https://source.unsplash.com/random/500x400"
             height="250px"

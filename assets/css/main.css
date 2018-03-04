@@ -13,7 +13,7 @@ html, .application {
 h1, h2, h3, .title, .subtitle {
   font-family: "Bungee", monospace;
   font-weight: 400;
-  font-size: 62px;
+  font-size: 32px;
 }
 *, *:before, *:after {
   box-sizing: border-box;

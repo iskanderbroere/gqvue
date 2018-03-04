@@ -1,25 +1,37 @@
 <template>
   <v-app>
-    <v-toolbar 
+    <v-toolbar
       height="120"
-      color="secondary" 
-      dark 
+      color="secondary"
+      dark
+      flat
       app>
-      <v-toolbar-title>
-        <h1>BONAS</h1>
-      </v-toolbar-title>
-      <v-spacer/>
-      <v-toolbar-items>
-        <v-btn flat>Link One</v-btn>
-        <v-btn flat>Link Two</v-btn>
-        <v-btn flat>Link Three</v-btn>
-      </v-toolbar-items>
+      <v-container class="p-0">
+        <v-layout>
+          <v-toolbar-title>
+            <h1>BONAS</h1>
+          </v-toolbar-title>
+          <v-spacer/>
+          <v-toolbar-items>
+            <v-btn flat>Link One</v-btn>
+            <v-btn flat>Link Two</v-btn>
+            <v-btn flat>Link Three</v-btn>
+          </v-toolbar-items>
+        </v-layout>
+      </v-container>
     </v-toolbar>
     <v-content>
-      <v-container fluid>
-        <nuxt/>
-      </v-container>
+      <nuxt/>
     </v-content>
     <v-footer app/>
   </v-app>
 </template>
+
+<style lang="postcss" scoped>
+.toolbar__title {
+  margin-left: 0;
+}
+.toolbar__title h1 {
+  font-size: 62px;
+}
+</style>
