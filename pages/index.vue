@@ -2,7 +2,7 @@
   <section class="container">
     <div>
       <h1>
-        {{ me }}
+        {{ feed }}
       </h1>
       <h2 class="subtitle">
         My best Nuxt.js project
@@ -16,16 +16,13 @@
 </template>
 
 <script>
-import me from "~/apollo/queries/me"
+import feed from "~/apollo/queries/feed"
 
 export default {
   apollo: {
-    me: {
+    feed: {
       prefetch: true,
-      query: me,
-      error() {
-        console.log("We've got an error!")
-      }
+      query: feed
     }
   },
   head: {

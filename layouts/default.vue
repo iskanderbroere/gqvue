@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div v-if="$apollo.loading">Loading...</div>
     <nuxt/>
   </div>
 </template>
