@@ -49,9 +49,6 @@ export default {
       prefetch: true,
       query: feed
     }
-  },
-  head: {
-    title: "Cars with Apollo"
   }
 }
 </script>

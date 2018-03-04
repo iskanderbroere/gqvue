@@ -13,7 +13,7 @@
           </v-toolbar-title>
           <v-spacer/>
           <v-toolbar-items>
-            <v-btn flat>Link One</v-btn>
+            <v-btn nuxt to="/login" flat>Login</v-btn>
             <v-btn flat>Link Two</v-btn>
             <v-btn flat>Link Three</v-btn>
           </v-toolbar-items>

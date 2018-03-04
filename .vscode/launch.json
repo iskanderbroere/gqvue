@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug Nuxt",
+      "name": "Nuxt",
       "type": "node",
       "request": "launch",
       "protocol": "inspector",
@@ -15,8 +15,8 @@
       "cwd": "${workspaceRoot}",
       "sourceMaps": true,
       "env": {
-          "NODE_ENV": "development",
-          "DEBUG": "nuxt:*,app"
+        "NODE_ENV": "development",
+        "DEBUG": "nuxt:*,app"
       }
     }
   ]

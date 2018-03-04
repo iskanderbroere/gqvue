@@ -1,9 +1,7 @@
-const pkg = require("./package")
-
 module.exports = {
   mode: "universal",
   head: {
-    title: pkg.name,
+    title: "BONAS",
     meta: [
       { charset: "utf-8" },
       {
@@ -11,7 +9,7 @@ module.exports = {
         content:
           "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
       },
-      { hid: "description", name: "description", content: pkg.description }
+      { hid: "description", name: "description", content: "" }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
