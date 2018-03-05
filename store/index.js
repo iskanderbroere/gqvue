@@ -18,9 +18,8 @@ export const actions = {
   nuxtServerInit({ dispatch }, context) {
     return new Promise(resolve => {
       const cookies = cookie.parse(context.req.headers.cookie || "")
-      debugger
       if (cookies.hasOwnProperty("bonas-access-token")) {
-        console.log(["bonas-access-token"])
+        console.log(cookies["bonas-access-token"])
         dispatch("fetch")
           .then(() => {
             resolve(true)
@@ -37,10 +36,29 @@ export const actions = {
     })
   },
   fetch({ commit }) {
-    // let client = this.app.apolloProvider.defaultClient
-    const fakeUser = { name: "TESTIE", token: "1234" }
-    commit("set_user", fakeUser)
-    return fakeUser
+    let client = this.app.apolloProvider.defaultClient
+    debugger
+    return client
+      .query({
+        query: gql`
+          query me {
+            me {
+              id
+              token
+            }
+          }
+        `
+      })
+      .then(res => {
+        const r = res
+        console.log(r)
+        commit("set_user", r)
+        debugger
+        return r
+      })
+    //const fakeUser = { name: "TESTIE", token: "1234" }
+
+    //return fakeUser
     // return "api.auth
     //   .me()
     //   .then(response => {
