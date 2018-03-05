@@ -74,7 +74,6 @@ export default {
         })
         .then(res => {
           console.log("new draft: ", res)
-          debugger
           this.loading = false
           this.$router.push("/")
           // this.$store.commit("set_user", { token, name: user.name })

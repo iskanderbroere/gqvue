@@ -13,7 +13,6 @@ html, .application {
 h1, h2, h3, .toolbar__title {
   font-family: "Bungee", monospace;
   font-weight: 400;
-  font-size: 32px;
 }
 *, *:before, *:after {
   box-sizing: border-box;

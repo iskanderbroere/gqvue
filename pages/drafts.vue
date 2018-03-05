@@ -12,7 +12,7 @@
       </v-toolbar>
     </v-flex>
     <v-flex
-      v-for="card in feed"
+      v-for="card in drafts"
       :key="card.id"
       tag="article"
       sm12
@@ -48,18 +48,18 @@
 </template>
 
 <script>
-import feed from "~/apollo/queries/feed"
+import drafts from "~/apollo/queries/drafts"
 
 export default {
   data() {
     return {
-      feed: []
+      drafts: []
     }
   },
   apollo: {
-    feed: {
+    drafts: {
       prefetch: true,
-      query: feed
+      query: drafts
     }
   }
 }
