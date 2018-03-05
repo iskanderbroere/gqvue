@@ -1,15 +1,21 @@
 <template>
   <v-app>
-    <v-alert       
+    <v-alert
       :value="true" 
       type="error"
       outline >
       {{ error.message }} 
       <v-btn
         large
+        outline
+        @click="$router.go(-1)">
+        Back
+      </v-btn>
+      <v-btn
+        large
         nuxt
-        to="/"
-        outline>
+        outline
+        to="/">
         Home
       </v-btn>
     </v-alert>

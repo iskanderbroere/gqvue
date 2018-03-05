@@ -54,7 +54,7 @@
 
 <style lang="postcss" scoped>
 .toolbar__title {
-  margin-left: 0;
+  margin-left: 8px;
   display: flex;
   align-items: center;
   font-size: 62px;
