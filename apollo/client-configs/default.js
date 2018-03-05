@@ -6,6 +6,7 @@ import cookie from "cookie"
 export default context => {
   const httpLink = new HttpLink({ uri: "http://localhost:4000" })
   const middlewareLink = new ApolloLink((operation, forward) => {
+    debugger
     const cookies = cookie.parse(context.req.headers.cookie || "")
     if (cookies.hasOwnProperty("bonas-access-token")) {
       const token = `Bearer ${cookies["bonas-access-token"]}`
