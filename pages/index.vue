@@ -7,6 +7,7 @@
       sm12
       md6
       lg4
+      xl3
     >
       <v-card tile>
         <v-card-media
@@ -40,6 +41,11 @@
 import feed from "~/apollo/queries/feed"
 
 export default {
+  data() {
+    return {
+      feed: {}
+    }
+  },
   apollo: {
     feed: {
       prefetch: true,

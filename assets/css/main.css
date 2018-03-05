@@ -10,7 +10,7 @@ html, .application {
   font-family: "Space Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
 }
-h1, h2, h3, .title, .subtitle {
+h1, h2, h3, .toolbar__title {
   font-family: "Bungee", monospace;
   font-weight: 400;
   font-size: 32px;
