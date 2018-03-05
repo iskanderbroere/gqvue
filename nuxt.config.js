@@ -14,7 +14,8 @@ module.exports = {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
-        href: "https://fonts.googleapis.com/css?family=Bungee|Material+Icons",
+        href:
+          "https://fonts.googleapis.com/css?family=Bungee|Space+Mono|Material+Icons",
         rel: "stylesheet"
       }
     ]

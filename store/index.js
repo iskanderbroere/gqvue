@@ -3,8 +3,8 @@ export const state = () => ({
 })
 
 export const mutations = {
-  set_user(store, data) {
-    store.user = data
+  set_user(store, user) {
+    store.user = user
   },
   reset_user(store) {
     store.user = null
@@ -24,12 +24,10 @@ export const actions = {
   //     return error
   //   })
   //},
-  //login({ commit }, data) {
-  // return api.auth.login(data).then(response => {
-  //   commit("set_user", response.data.user)
-  //   return response
-  // })
-  //},
+  // login({ commit }, user) {
+  //   commit("set_user", user)
+  //   return user
+  // },
   reset({ commit }) {
     commit("reset_user")
     return Promise.resolve()
