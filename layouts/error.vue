@@ -27,7 +27,12 @@ export default {
   props: {
     error: {
       type: Object,
-      default: () => {}
+      default() {
+        return {
+          statusCode: 500,
+          message: "An error has occurred"
+        }
+      }
     }
   }
 }

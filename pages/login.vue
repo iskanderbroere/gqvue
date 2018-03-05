@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import LOGIN from "~/apollo/mutations/login"
+import login from "~/apollo/mutations/login"
 
 export default {
   layout: "fullscreen",
@@ -56,7 +56,7 @@ export default {
       this.loading = true
       this.$apollo
         .mutate({
-          mutation: LOGIN,
+          mutation: login,
           variables: {
             email: this.email,
             password: this.password

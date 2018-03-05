@@ -1,0 +1,7 @@
+mutation makeDraft ($title: String!, $text: String!) {
+  createDraft(title: $title, text: $text) {
+    id
+    title
+    text
+  }
+}
