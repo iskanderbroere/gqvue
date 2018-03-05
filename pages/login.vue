@@ -23,6 +23,14 @@
             outline
             block
             type="submit">Log In</v-btn>
+          <v-btn
+            nuxt
+            large
+            outline
+            block
+            @click="$router.go(-1)">
+            Back
+          </v-btn>
         </v-form>
       </v-card-text>
     </v-card>
@@ -57,6 +65,7 @@ export default {
         .then(res => {
           const { token, user } = res.data.login
           this.loading = false
+          this.$router.push("/")
           this.$store.commit("set_user", { token, name: user.name })
         })
         .catch(error => {

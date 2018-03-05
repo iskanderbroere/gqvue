@@ -7,7 +7,6 @@ export default ({ store }) => {
 
   const middlewareLink = new ApolloLink((operation, forward) => {
     if (store.state.user) {
-      console.log("USER IN STATE: ", store.state.user.token)
       // const token = process.server
       //   ? "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjamViZ2Ntdzg4c3l2MDEzNGJhcmVpZWg5IiwiaWF0IjoxNTIwMDg2Nzg1fQ.tz-6BX8ZWW-SXSMKmTUqsBHKwIlZ88jyZxaPl3mNcZg"
       //   : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjamViZ2Ntdzg4c3l2MDEzNGJhcmVpZWg5IiwiaWF0IjoxNTIwMDg2Nzg1fQ.tz-6BX8ZWW-SXSMKmTUqsBHKwIlZ88jyZxaPl3mNcZg"
