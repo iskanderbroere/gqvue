@@ -6,7 +6,6 @@ export const state = () => ({
 
 export const mutations = {
   set_user(store, user) {
-    console.log("user mutation", user)
     store.user = user
   },
   reset_user(store) {
@@ -16,15 +15,13 @@ export const mutations = {
 
 export const actions = {
   nuxtServerInit({ dispatch }) {
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       dispatch("fetch")
         .then(() => {
-          console.log("success")
           resolve(true)
         })
         .catch(error => {
-          console.log("Provided token is invalid:", error)
-          resolve(false)
+          reject(error)
         })
     })
   },
@@ -39,22 +36,6 @@ export const actions = {
         commit("set_user", res.data.me)
       })
   }
-  //const fakeUser = { name: "TESTIE", token: "1234" }
-  //return fakeUser
-  // return "api.auth
-  //   .me()
-  //   .then(response => {
-  //     commit("set_user", response.data.result)
-  //     return response
-  //   })
-  //   .catch(error => {
-  //     commit("reset_user")
-  //     return error
-  //   })"
-  // login({ commit }, user) {
-  //   commit("set_user", user)
-  //   return user
-  // },
   // reset({ commit }) {
   //   commit("reset_user")
   //   return Promise.resolve()

@@ -75,7 +75,6 @@ export default {
         .then(() => {
           this.loading = false
           this.$router.push("/drafts")
-          // this.$store.commit("set_user", { token, name: user.name })
         })
         .catch(error => {
           this.loading = false

@@ -1,7 +1,7 @@
 <template>
   <v-layout row wrap>
     <v-flex xs12>
-      <v-toolbar>
+      <v-toolbar flat>
         <v-toolbar-items class="hidden-sm-and-down">
           <v-btn
             nuxt
