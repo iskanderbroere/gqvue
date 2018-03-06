@@ -34,6 +34,14 @@
               flat>
               {{ $store.state.user.name }}<v-icon right>person_outline</v-icon>
             </v-btn>
+            <v-btn
+              v-if="$store.state.user"
+              large
+              nuxt
+              to="/drafts"
+              flat>
+              Drafts<v-icon right>draft</v-icon>
+            </v-btn>
           </v-toolbar-items>
           <v-btn icon>
             <v-icon>more_vert</v-icon>

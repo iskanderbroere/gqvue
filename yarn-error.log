@@ -1,14 +1,14 @@
 Arguments: 
-  /home/iskander/.nvm/versions/node/v9.3.0/bin/node /usr/share/yarn/bin/yarn.js upgrade-interactive --latest
+  /home/iskander/.nvm/versions/node/v9.7.1/bin/node /usr/share/yarn/bin/yarn.js upgrade-interactive --latest
 
 PATH: 
-  /home/iskander/.nvm/versions/node/v9.3.0/bin:/home/iskander/bin:/home/iskander/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/iskander/.yarn/bin:/home/iskander/.yarn/bin:/home/iskander/.config/yarn/global/node_modules/.bin
+  /home/iskander/.nvm/versions/node/v9.7.1/bin:/home/iskander/bin:/home/iskander/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/iskander/.yarn/bin:/home/iskander/.yarn/bin:/home/iskander/.config/yarn/global/node_modules/.bin
 
 Yarn version: 
   1.5.1
 
 Node version: 
-  9.3.0
+  9.7.1
 
 Platform: 
   linux x64
@@ -31,9 +31,12 @@ npm manifest:
     "dependencies": {
       "@nuxtjs/apollo": "^3.0.4",
       "apollo-link-http": "^1.5.2",
+      "cookie": "^0.3.1",
       "graphql": "^0.13.1",
       "graphql-tag": "^2.8.0",
-      "nuxt": "^1.0.0"
+      "js-cookie": "^2.2.0",
+      "nuxt": "^1.0.0",
+      "vuetify": "^1.0.4"
     },
     "devDependencies": {
       "babel-eslint": "^8.2.2",
@@ -3309,6 +3312,10 @@ Lockfile:
     version "2.4.3"
     resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.3.tgz#2e545ec2b0f2957f41356510205214e98fad6582"
   
+  js-cookie@^2.2.0:
+    version "2.2.0"
+    resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.0.tgz#1b2c279a6eece380a12168b92485265b35b1effb"
+  
   js-tokens@^3.0.0, js-tokens@^3.0.2:
     version "3.0.2"
     resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
@@ -6180,6 +6187,10 @@ Lockfile:
     version "2.5.13"
     resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.13.tgz#95bd31e20efcf7a7f39239c9aa6787ce8cf578e1"
   
+  vuetify@^1.0.4:
+    version "1.0.4"
+    resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.0.4.tgz#ef712e4ccd231d0d3678da31047d338d94e7f20d"
+  
   vuex@^3.0.1:
     version "3.0.1"
     resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.0.1.tgz#e761352ebe0af537d4bb755a9b9dc4be3df7efd2"
@@ -6415,6 +6426,4 @@ Lockfile:
 
 Trace: 
   Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com:443
-      at Object._errnoException (util.js:999:13)
-      at errnoException (dns.js:60:15)
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:97:26)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26)

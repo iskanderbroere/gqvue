@@ -1,6 +1,8 @@
 module.exports = {
   mode: "universal",
   head: {
+    // testing
+    mode: "spa",
     title: "BONAS",
     meta: [
       { charset: "utf-8" },

@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@nuxtjs/apollo": "^3.0.4",
-    "apollo-link-http": "^1.5.2",
+    "apollo-link-http": "^1.5.3",
     "cookie": "^0.3.1",
     "graphql": "^0.13.1",
     "graphql-tag": "^2.8.0",
