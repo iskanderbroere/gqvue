@@ -66,7 +66,7 @@ export default {
           const { token, user } = res.data.login
           cookies.set("bonas-access-token", token, { expires: 7 })
           this.loading = false
-          // this.$router.push("/drafts")
+          this.$router.push("/drafts")
           this.$store.commit("set_user", { token, name: user.name })
         })
         .catch(error => {

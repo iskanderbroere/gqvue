@@ -14,14 +14,8 @@ export default ctx => {
       }
       return {}
     }
-    console.log(cookies())
-    // const cookies = process.server
-    //   ? cookie.parse(ctx.req.headers.cookie || "")
-    //   : { "bonas-access-token": window.__NUXT__.state.user.token }
-    debugger
     if (cookies().hasOwnProperty("bonas-access-token")) {
       const token = `Bearer ${cookies()["bonas-access-token"]}`
-      console.log("Token: ", token)
       operation.setContext({
         headers: {
           authorization: token

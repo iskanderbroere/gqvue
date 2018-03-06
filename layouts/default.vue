@@ -40,7 +40,7 @@
               nuxt
               to="/drafts"
               flat>
-              Drafts<v-icon right>draft</v-icon>
+              Drafts<v-icon right>drafts</v-icon>
             </v-btn>
           </v-toolbar-items>
           <v-btn icon>

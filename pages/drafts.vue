@@ -2,7 +2,7 @@
   <v-layout row wrap>
     <v-flex xs12>
       <v-toolbar>
-        <v-toolbar-items class="hidden-sm-and-down">
+        <v-toolbar-items>
           <v-btn
             nuxt
             large
