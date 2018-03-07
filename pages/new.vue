@@ -1,5 +1,5 @@
 <template>
-  <v-form v-model="valid">
+  <v-form v-model="valid" @submit.prevent="newPost">
     <v-text-field
       v-model="title"
       :rules="titleRules"
@@ -16,7 +16,7 @@
     />
     <v-btn
       :disabled="!valid"
-      @click="newPost"
+      type="submit"
     >
       Submit
     </v-btn>

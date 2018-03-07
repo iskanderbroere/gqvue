@@ -28,12 +28,15 @@ export const actions = {
   fetch({ commit }) {
     let client = this.app.apolloProvider.defaultClient
 
-    client
+    return client
       .query({
         query: me
       })
       .then(res => {
         commit("set_user", res.data.me)
+      })
+      .catch(e => {
+        console.error(e)
       })
   }
   // reset({ commit }) {
