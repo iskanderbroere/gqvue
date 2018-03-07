@@ -10,6 +10,7 @@
             flat>New post<v-icon right>create</v-icon></v-btn>
         </v-toolbar-items>
       </v-toolbar>
+      <v-progress-linear v-if="this.$apollo.loading" indeterminate color="secondary"/>
     </v-flex>
     <v-flex
       v-for="card in drafts"
