@@ -1,6 +1,6 @@
 <template>
-  <v-layout row wrap>
-    <v-flex xs12>
+  <v-layout justify-center align-center>
+    <v-flex xs12 tile style="flex: 0 1 400px">
       <v-card>
         <v-card-title>
           <div>
