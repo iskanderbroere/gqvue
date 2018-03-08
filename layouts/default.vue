@@ -8,7 +8,7 @@
       app>
       <v-container fill-height class="py-0">
         <v-layout>
-          <v-toolbar-title >BONAS</v-toolbar-title>
+          <v-toolbar-title >apollo-nuxt-auth</v-toolbar-title>
           <v-spacer/>
           <v-toolbar-items>
             <v-btn
@@ -30,7 +30,7 @@
               v-if="$store.state.user"
               large
               nuxt
-              to="/account"
+              to="/admin"
               flat>
               {{ $store.state.user.name }}<v-icon right>person_outline</v-icon>
             </v-btn>
@@ -38,7 +38,7 @@
               v-if="$store.state.user"
               large
               nuxt
-              to="/drafts"
+              to="/admin/drafts"
               flat>
               Drafts<v-icon right>drafts</v-icon>
             </v-btn>
@@ -65,7 +65,7 @@
   margin-left: 8px;
   display: flex;
   align-items: center;
-  font-size: 62px;
+  font-size: 42px;
 }
 .layout .btn {
   display: flex;

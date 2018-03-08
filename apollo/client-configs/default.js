@@ -9,7 +9,8 @@ export const hasCookie = req => {
     return cookie.parse(req.headers.cookie || "")
   } else if (process.client) {
     return {
-      "bonas-access-token": jscookies.get("bonas-access-token") || ""
+      "apollo-nuxt-auth-access-token":
+        jscookies.get("apollo-nuxt-auth-access-token") || ""
     }
   }
   return null
@@ -19,8 +20,8 @@ export default ({ req }) => {
   const httpLink = new HttpLink({ uri: "http://localhost:4000" })
   const middlewareLink = new ApolloLink((operation, forward) => {
     const cookies = hasCookie(req)
-    if (cookies.hasOwnProperty("bonas-access-token")) {
-      const token = "Bearer " + cookies["bonas-access-token"]
+    if (cookies.hasOwnProperty("apollo-nuxt-auth-access-token")) {
+      const token = "Bearer " + cookies["apollo-nuxt-auth-access-token"]
       operation.setContext({
         headers: {
           authorization: token

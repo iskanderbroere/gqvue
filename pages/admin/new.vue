@@ -74,7 +74,7 @@ export default {
         })
         .then(() => {
           this.loading = false
-          this.$router.push("/drafts")
+          this.$router.push("/admin/drafts")
         })
         .catch(error => {
           this.loading = false

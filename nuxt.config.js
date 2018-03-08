@@ -3,7 +3,7 @@ module.exports = {
   head: {
     // testing
     mode: "spa",
-    title: "BONAS",
+    title: "apollo-nuxt-auth",
     meta: [
       { charset: "utf-8" },
       {
@@ -30,6 +30,9 @@ module.exports = {
     clientConfigs: {
       default: "~/apollo/client-configs/default.js"
     }
+  },
+  router: {
+    middleware: ["auth"]
   },
   build: {
     extend(config, ctx) {

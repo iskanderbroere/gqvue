@@ -6,7 +6,7 @@
           <v-btn
             nuxt
             large
-            to="/new"
+            to="/admin/new"
             flat>New post<v-icon right>create</v-icon></v-btn>
         </v-toolbar-items>
       </v-toolbar>
