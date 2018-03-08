@@ -1,4 +1,5 @@
 import me from "~/apollo/queries/me.gql"
+import { hasCookie } from "~/apollo/client-configs/default.js"
 
 export const state = () => ({
   user: null
@@ -14,8 +15,11 @@ export const mutations = {
 }
 
 export const actions = {
-  nuxtServerInit({ dispatch }) {
+  nuxtServerInit({ dispatch }, { req }) {
     return new Promise((resolve, reject) => {
+      if (!hasCookie(req)) {
+        return
+      }
       dispatch("fetch")
         .then(() => {
           resolve(true)

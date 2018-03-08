@@ -54,31 +54,39 @@ export default {
     submit() {
       this.alert = null
       this.loading = true
-      this.$apollo
-        .mutate({
-          mutation: login,
-          variables: {
-            email: this.email,
-            password: this.password
-          }
-        })
-        .then(res => {
-          const { token, user } = res.data.login
-          cookies.set("bonas-access-token", token, { expires: 7 })
-          this.loading = false
-          this.$router.push("/drafts")
-          this.$store.commit("set_user", { ...user })
-        })
-        .catch(error => {
-          this.loading = false
-          console.error(error)
-          if (error.graphQLErrors && error.graphQLErrors.length > 0) {
-            this.alert = {
-              type: "error",
-              message: error.graphQLErrors[0].message || "No error message"
+      if (cookies.get("bonas-access-token")) {
+        this.$store.dispatch("fetch")
+        this.loading = false
+        this.$router.push("/drafts")
+      } else {
+        this.$apollo
+          .mutate({
+            mutation: login,
+            variables: {
+              email: this.email,
+              password: this.password
             }
-          }
-        })
+          })
+          .then(res => {
+            const { token, user } = res.data.login
+            cookies.set("bonas-access-token", token, { expires: 7 })
+            this.loading = false
+            this.$router.push("/drafts")
+            this.$store.commit("set_user", { ...user })
+          })
+          .catch(error => {
+            this.loading = false
+            this.password = ""
+            cookies.remove("bonas-access-token")
+            console.error(error)
+            if (error.graphQLErrors && error.graphQLErrors.length > 0) {
+              this.alert = {
+                type: "error",
+                message: error.graphQLErrors[0].message || "No error message"
+              }
+            }
+          })
+      }
     }
   }
 }
